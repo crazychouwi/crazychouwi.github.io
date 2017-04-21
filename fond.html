@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Carte Leaflet</title>
+  </head>
+  <body>
+
+    <div id="macarte" style="width:900px; height:845px"></div>
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+
+    <script>
+    var carte = L.map('macarte').setView([46.3630104, 2.9846608], 6);
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(carte);1.35330399999998
+  var vache = L.icon({
+  iconUrl: 'vache.png',
+  iconSize:     [25, 40],
+  iconAnchor:   [22, 94],
+  });
+  var sushi = L.icon({
+  iconUrl: 'Sushi.png',
+  iconSize:     [25, 40],
+  iconAnchor:   [22, 94],
+  });
+    var marker = L.marker([48.6930642, 2.2947615000000496]).addTo(carte);
+    var marker1 = L.marker([46.174349,1.35330399999998],{icon:vache}).addTo(carte);
+    var marker2 = L.marker([43.25062700000001,2.895216000000005],{icon:sushi}).addTo(carte);
+
+
+    </script>
+  </body>
+</html>
